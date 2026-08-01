@@ -7,7 +7,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=13, unique=True,)
     category = models.CharField(max_length=50, verbose_name="Category")
     publish_year = models.IntegerField(verbose_name="Publish Year")
-    avilable_copies = models.PositiveIntegerField(default=1, verbose_name="Avilable Copies")
+    available_copies = models.PositiveIntegerField(default=1, verbose_name="Avilable Copies")
     total_copies = models.PositiveIntegerField(default=1, verbose_name="Total Copies")
     description = models.TextField(blank=True, null=True, verbose_name="Description")
 
