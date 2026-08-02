@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+My Loans
+{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">My Borrowed Books</h1>
+
+<table class="loan-table">
+
+    <thead>
+        <tr>
+            <th>Book Title</th>
+            <th>Borrow Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    {% for loan in loans %}
+
+        <tr>
+
+            <td>{{ loan.book.title }}</td>
+
+            <td>{{ loan.borrow_date }}</td>
+
+            <td>{{ loan.status }}</td>
+
+            <td>
+
+                <button class="return-btn">
+
+                    Return
+
+                </button>
+
+            </td>
+
+        </tr>
+
+    {% empty %}
+
+        <tr>
+
+            <td colspan="4">
+
+                No borrowed books.
+
+            </td>
+
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Library Management System{% endblock %}</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+   <div class="logo">
+    <a href="{% url 'book_list' %}"
+       style="
+           text-decoration: none;
+           color: white;
+           font-size: 24px;
+           font-weight: bold;
+       ">
+        📚 Library Management System
+    </a>
+</div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="{% url 'book_list' %}">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'book_list' %}">
+                    Catalog
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    My Loans
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="nav-buttons">
+
+            <a href="#" class="btn login-btn">
+                Login
+            </a>
+
+            <a href="#" class="btn signup-btn">
+                Sign Up
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<main class="container">
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+<footer>
+    <p>&copy; 2026 Library Management System. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+

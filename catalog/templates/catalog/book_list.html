@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Book Catalog
+{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">📚 Book Catalog</h1>
+
+<form method="GET" style="text-align:center; margin:30px 0;">
+
+    <input
+        type="text"
+        name="q"
+        value="{{ request.GET.q }}"
+        placeholder="🔍 Search by title or author..."
+        style="
+            width:420px;
+            max-width:90%;
+            padding:12px 18px;
+            border-radius:30px;
+            border:1px solid #ccc;
+            outline:none;
+            font-size:16px;
+        "
+    >
+
+    <button
+        type="submit"
+        style="
+            padding:12px 22px;
+            margin-left:8px;
+            border:none;
+            border-radius:30px;
+            background:#24408e;
+            color:white;
+            cursor:pointer;
+            font-size:15px;
+        "
+    >
+        Search
+    </button>
+
+</form>
+
+<div class="books-container">
+
+{% for book in books %}
+
+<div class="book-card">
+
+    <h3>
+
+        <a
+            href="{% url 'book_detail' book.id %}"
+            style="
+                text-decoration:none;
+                color:#24408e;
+                font-size:24px;
+                font-weight:bold;
+            "
+        >
+            {{ book.title }}
+        </a>
+
+    </h3>
+
+    <p><strong>Author:</strong> {{ book.author }}</p>
+
+    <p><strong>Category:</strong> {{ book.category }}</p>
+
+    <p>
+        <strong>Available:</strong>
+        {{ book.available_copies }}/{{ book.total_copies }}
+    </p>
+
+    {% if book.available_copies > 0 %}
+
+        <button class="borrow-btn">
+            Borrow
+        </button>
+
+    {% else %}
+
+        <button class="borrow-btn disabled" disabled>
+            Unavailable
+        </button>
+
+    {% endif %}
+
+</div>
+
+{% empty %}
+
+<div class="no-books">
+    <h3>No books found.</h3>
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
