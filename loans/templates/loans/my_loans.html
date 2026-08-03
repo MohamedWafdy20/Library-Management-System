@@ -6,59 +6,62 @@ My Loans
 
 {% block content %}
 
-<h1 class="page-title">My Borrowed Books</h1>
+<h1 class="page-title">
+    📚 My Loans
+</h1>
 
-<table class="loan-table">
+<div class="books-container">
 
-    <thead>
-        <tr>
-            <th>Book Title</th>
-            <th>Borrow Date</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </thead>
+{% for loan in loans %}
 
-    <tbody>
+<div class="book-card">
 
-    {% for loan in loans %}
+    <h3>{{ loan.book.title }}</h3>
 
-        <tr>
+    <p>
+        <strong>Author:</strong>
+        {{ loan.book.author }}
+    </p>
 
-            <td>{{ loan.book.title }}</td>
+    <p>
+        <strong>Borrow Date:</strong>
+        {{ loan.borrow_date|date:"d M Y" }}
+    </p>
 
-            <td>{{ loan.borrow_date }}</td>
+    <a href="{% url 'return_book' loan.id %}"
+       style="
+            display:block;
+            width:100%;
+            text-align:center;
+            padding:12px;
+            margin-top:20px;
+            background:#dc3545;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-weight:bold;
+       ">
 
-            <td>{{ loan.status }}</td>
+        🔄 Return Book
 
-            <td>
+    </a>
 
-                <button class="return-btn">
+</div>
 
-                    Return
+{% empty %}
 
-                </button>
+<div class="no-books">
 
-            </td>
+    <h3>
 
-        </tr>
+        You don't have any borrowed books.
 
-    {% empty %}
+    </h3>
 
-        <tr>
+</div>
 
-            <td colspan="4">
+{% endfor %}
 
-                No borrowed books.
-
-            </td>
-
-        </tr>
-
-    {% endfor %}
-
-    </tbody>
-
-</table>
+</div>
 
 {% endblock %}

@@ -9,9 +9,7 @@ from .forms import RegisterForm, EditProfileForm
 from .models import CustomUser
 
 
-# ==========================
-# Register
-# ==========================
+
 
 def register_view(request):
 
@@ -31,6 +29,7 @@ def register_view(request):
             return redirect("login")
 
         else:
+
             print("=" * 50)
             print(form.errors)
             print("=" * 50)
@@ -44,7 +43,6 @@ def register_view(request):
         "accounts/register.html",
         {"form": form}
     )
-
 
 
 # ==========================
@@ -68,9 +66,11 @@ def login_view(request):
 
             login(request, user)
 
+            
             if user.is_superuser or user.is_admin:
-                return redirect("admin_dashboard")
+                return redirect("admin:index")
 
+            # Normal User
             return redirect("book_list")
 
         else:
@@ -86,10 +86,6 @@ def login_view(request):
     )
 
 
-# ==========================
-# Logout
-# ==========================
-
 def logout_view(request):
 
     logout(request)
@@ -97,9 +93,7 @@ def logout_view(request):
     return redirect("login")
 
 
-# ==========================
-# Profile
-# ==========================
+
 
 @login_required
 def profile_view(request):
@@ -149,70 +143,6 @@ def edit_profile(request):
         }
     )
 
-
-# ==========================
-# Change Password
-# ==========================
-
-@login_required
-def change_password(request):
-
-    if request.method == "POST":
-
-        form = PasswordChangeForm(
-            request.user,
-            request.POST
-        )
-
-        if form.is_valid():
-
-            user = form.save()
-
-            update_session_auth_hash(
-                request,
-                user
-            )
-
-            messages.success(
-                request,
-                "Password changed successfully."
-            )
-
-            return redirect("profile")
-
-    else:
-
-        form = PasswordChangeForm(
-            request.user
-        )
-
-    return render(
-        request,
-        "accounts/change_password.html",
-        {
-            "form": form
-        }
-    )
-
-
-# ==========================
-# Admin Dashboard
-# ==========================
-
-@login_required
-def admin_dashboard(request):
-
-    if not (
-        request.user.is_superuser
-        or request.user.is_admin
-    ):
-
-        return redirect("book_list")
-
-    return render(
-        request,
-        "accounts/admin_dashboard.html"
-    )
 
 
 # ==========================

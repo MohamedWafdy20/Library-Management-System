@@ -26,7 +26,6 @@ class RegisterForm(UserCreationForm):
 
         super().__init__(*args, **kwargs)
 
-        # إزالة كل الـ Help Text
         for field in self.fields.values():
             field.help_text = ""
 
@@ -81,11 +80,8 @@ class RegisterForm(UserCreationForm):
 
 
 class EditProfileForm(ModelForm):
-
     class Meta:
-
         model = CustomUser
-
         fields = [
             "first_name",
             "last_name",
@@ -94,36 +90,11 @@ class EditProfileForm(ModelForm):
             "address",
         ]
 
-        widgets = {
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-            "first_name": forms.TextInput(
-                attrs={
-                    "class": "form-control"
-                }
-            ),
-
-            "last_name": forms.TextInput(
-                attrs={
-                    "class": "form-control"
-                }
-            ),
-
-            "email": forms.EmailInput(
-                attrs={
-                    "class": "form-control"
-                }
-            ),
-
-            "phone": forms.TextInput(
-                attrs={
-                    "class": "form-control"
-                }
-            ),
-
-            "address": forms.TextInput(
-                attrs={
-                    "class": "form-control"
-                }
-            ),
-
-        }
+        for field in self.fields.values():
+            field.widget.attrs.update({
+                "class": "form-control"
+            })
+        

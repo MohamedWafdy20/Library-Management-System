@@ -14,7 +14,12 @@ Book Catalog
 
     <form method="GET">
 
-        <input type="text" name="q" value="{{ request.GET.q }}" placeholder="🔍 Search by title or author...">
+        <input
+            type="text"
+            name="q"
+            value="{{ request.GET.q }}"
+            placeholder="🔍 Search by title or author..."
+        >
 
         <button type="submit">
             Search
@@ -53,44 +58,50 @@ Book Catalog
             {{ book.available_copies }}/{{ book.total_copies }}
         </p>
 
-
-
-
-
         {% if book.available_copies > 0 %}
 
-        <button style="
-width:100%;
-padding:12px;
-margin-top:18px;
-background:#24408e;
-color:white;
-border:none;
-border-radius:10px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-" onmouseover="this.style.background='#18306d'" onmouseout="this.style.background='#24408e'">
-            📖 Borrow
-        </button>
+            <a href="{% url 'borrow_book' book.id %}"
+               style="
+                    display:block;
+                    width:100%;
+                    padding:12px;
+                    margin-top:18px;
+                    background:#24408e;
+                    color:white;
+                    text-decoration:none;
+                    text-align:center;
+                    border-radius:10px;
+                    font-size:16px;
+                    font-weight:bold;
+                    transition:.3s;
+               "
+               onmouseover="this.style.background='#18306d'"
+               onmouseout="this.style.background='#24408e'">
+
+                📖 Borrow
+
+            </a>
 
         {% else %}
 
-        <button disabled style="
-width:100%;
-padding:12px;
-margin-top:18px;
-background:#9e9e9e;
-color:white;
-border:none;
-border-radius:10px;
-font-size:16px;
-font-weight:bold;
-cursor:not-allowed;
-">
-            Unavailable
-        </button>
+            <button
+                disabled
+                style="
+                    width:100%;
+                    padding:12px;
+                    margin-top:18px;
+                    background:#9e9e9e;
+                    color:white;
+                    border:none;
+                    border-radius:10px;
+                    font-size:16px;
+                    font-weight:bold;
+                    cursor:not-allowed;
+                ">
+
+                Unavailable
+
+            </button>
 
         {% endif %}
 
