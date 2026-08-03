@@ -1,0 +1,331 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#f4f7fb;
+    color:#333;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ===========================
+        Navbar
+=========================== */
+
+header{
+
+    background:#24408e;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+}
+
+.navbar{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo-link{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.logo-link:hover{
+
+    color:#ffd54f;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#ffd54f;
+
+}
+
+.nav-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.username{
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+.btn{
+
+    text-decoration:none;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:10px 20px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.login-btn{
+
+    background:#fff;
+
+    color:#24408e;
+
+}
+
+.login-btn:hover{
+
+    background:#ffd54f;
+
+    color:#000;
+
+}
+
+.signup-btn{
+
+    background:#ffd54f;
+
+    color:#222;
+
+}
+
+.signup-btn:hover{
+
+    background:#ffca28;
+
+}
+
+/* ===========================
+       Main
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    flex:1;
+
+}
+
+/* ===========================
+      Cards
+=========================== */
+
+.card{
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    background:#fff;
+
+}
+
+/* ===========================
+     Borrow Button
+=========================== */
+
+.borrow-btn{
+
+    background:#24408e;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:10px 24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.borrow-btn:hover{
+
+    background:#1d3475;
+
+}
+
+.borrow-btn:disabled{
+
+    background:#9e9e9e;
+
+    cursor:not-allowed;
+
+}
+
+/* ===========================
+      Footer
+=========================== */
+
+footer{
+
+    margin-top:auto;
+
+    background:#24408e;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:18px;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+      Alerts
+=========================== */
+
+.alert{
+
+    border-radius:0;
+
+    margin-bottom:0;
+
+}
+
+/* ===========================
+      Responsive
+=========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .nav-links{
+
+        gap:18px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .logo-link{
+
+        font-size:22px;
+
+    }
+
+    .nav-links{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        text-align:center;
+
+    }
+
+    .nav-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
