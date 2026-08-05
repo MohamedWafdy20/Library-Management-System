@@ -14,19 +14,32 @@
 
             <div class="col-md-4 text-center">
 
-                <div style="
-                    width:220px;
-                    height:300px;
-                    background:#eef2f7;
-                    border-radius:15px;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    margin:auto;
-                    font-size:80px;
-                ">
-                    📚
-                </div>
+                {% if book.cover %}
+                    <img src="{{ book.cover.url }}" 
+                         alt="{{ book.title }}" 
+                         style="
+                             width:220px;
+                             height:300px;
+                             object-fit:cover;
+                             border-radius:15px;
+                             margin:auto;
+                             display:block;
+                         ">
+                {% else %}
+                    <div style="
+                        width:220px;
+                        height:300px;
+                        background:#eef2f7;
+                        border-radius:15px;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        margin:auto;
+                        font-size:80px;
+                    ">
+                        📚
+                    </div>
+                {% endif %}
 
             </div>
 
@@ -74,16 +87,16 @@
 
                         <a href="{% url 'borrow_book' book.id %}"
                            style="
-                                flex:1;
-                                text-align:center;
-                                padding:13px;
-                                background:#24408e;
-                                color:white;
-                                text-decoration:none;
-                                border-radius:10px;
-                                font-size:16px;
-                                font-weight:bold;
-                                transition:.3s;
+                               flex:1;
+                               text-align:center;
+                               padding:13px;
+                               background:#24408e;
+                               color:white;
+                               text-decoration:none;
+                               border-radius:10px;
+                               font-size:16px;
+                               font-weight:bold;
+                               transition:.3s;
                            "
                            onmouseover="this.style.background='#18306d'"
                            onmouseout="this.style.background='#24408e'">
@@ -116,15 +129,15 @@
 
                     <a href="{% url 'book_list' %}"
                        style="
-                            flex:1;
-                            text-align:center;
-                            padding:13px;
-                            background:#6c757d;
-                            color:white;
-                            text-decoration:none;
-                            border-radius:10px;
-                            font-size:16px;
-                            font-weight:bold;
+                           flex:1;
+                           text-align:center;
+                           padding:13px;
+                           background:#6c757d;
+                           color:white;
+                           text-decoration:none;
+                           border-radius:10px;
+                           font-size:16px;
+                           font-weight:bold;
                        ">
 
                         ⬅ Back

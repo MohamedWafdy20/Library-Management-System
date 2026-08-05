@@ -1,6 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Register{% endblock %}
+{% block title %}
+Register
+{% endblock %}
 
 {% block content %}
 
@@ -8,40 +11,29 @@
 
     <div class="account-card">
 
-        <h2 class="account-title">
+        <h2>Create Account</h2>
 
-            Create Account
-
-        </h2>
-
-        <form method="POST">
+        <form method="POST" id="registerForm">
 
             {% csrf_token %}
 
             {{ form.as_p }}
 
             <button type="submit">
-
                 Register
-
             </button>
 
         </form>
 
-        <div class="account-links">
-
+        <p>
             Already have an account?
-
-            <a href="{% url 'login' %}">
-
-                Login
-
-            </a>
-
-        </div>
+            <a href="{% url 'login' %}">Login</a>
+        </p>
 
     </div>
 
 </div>
+
+<script src="{% static 'js/register.js' %}"></script>
 
 {% endblock %}

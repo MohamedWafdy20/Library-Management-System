@@ -2,14 +2,14 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth import update_session_auth_hash
 
 from .forms import RegisterForm, EditProfileForm
 from .models import CustomUser
 
 
-
+# ==========================
+# Register
+# ==========================
 
 def register_view(request):
 
@@ -41,7 +41,9 @@ def register_view(request):
     return render(
         request,
         "accounts/register.html",
-        {"form": form}
+        {
+            "form": form
+        }
     )
 
 
@@ -66,11 +68,9 @@ def login_view(request):
 
             login(request, user)
 
-            
             if user.is_superuser or user.is_admin:
                 return redirect("admin:index")
 
-            # Normal User
             return redirect("book_list")
 
         else:
@@ -86,6 +86,10 @@ def login_view(request):
     )
 
 
+# ==========================
+# Logout
+# ==========================
+
 def logout_view(request):
 
     logout(request)
@@ -93,7 +97,9 @@ def logout_view(request):
     return redirect("login")
 
 
-
+# ==========================
+# Profile
+# ==========================
 
 @login_required
 def profile_view(request):
@@ -144,7 +150,6 @@ def edit_profile(request):
     )
 
 
-
 # ==========================
 # Manage Users
 # ==========================
@@ -168,4 +173,3 @@ def manage_users(request):
             "users": users
         }
     )
-# Create your views here.

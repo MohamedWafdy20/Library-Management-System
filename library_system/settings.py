@@ -125,4 +125,9 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_URL = "login"
 
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 

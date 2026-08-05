@@ -1,5 +1,4 @@
 from django.urls import path
-from django.contrib.auth import views as auth_views
 from . import views
 
 urlpatterns = [
@@ -12,7 +11,6 @@ urlpatterns = [
     # Profile
     path("profile/", views.profile_view, name="profile"),
     path("edit-profile/", views.edit_profile, name="edit_profile"),
-    path("change-password/", views.change_password, name="change_password"),
 
     # Admin
     path(
@@ -20,4 +18,5 @@ urlpatterns = [
         views.manage_users,
         name="manage_users"
     ),
+
 ]
