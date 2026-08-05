@@ -1,0 +1,533 @@
+[
+{
+    "model": "accounts.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$Be4VNRCmbh6gzqCM1lgJaH$j5btAzy9+tR0Aou3/ckted9SMH8/0RwCK7G62psrVaM=",
+        "last_login": "2026-08-05T22:07:40.820Z",
+        "is_superuser": true,
+        "username": "shimaa",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-08-03T09:50:08.361Z",
+        "email": "shimaa@gmail.com",
+        "phone": "",
+        "address": "",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$cizYK9IUUExxHf6ZkXVuID$qFZhB7a6bqxvV32AeNBexMarKkc8vOuRZbis3VbW0OY=",
+        "last_login": "2026-08-03T10:00:58.666Z",
+        "is_superuser": false,
+        "username": "ahmed",
+        "first_name": "ahmed",
+        "last_name": "elian",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-08-03T10:00:33.886Z",
+        "email": "ahmed@gmail.com",
+        "phone": "01092507202",
+        "address": "djidoeoold",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$NwLr9HiOeFQ9gFDt3HJlS7$Zg3ZSrz2rGxYOyLsflwlF0GdvKcnueQEs1p+s1ZN3Kc=",
+        "last_login": "2026-08-05T20:59:41.913Z",
+        "is_superuser": false,
+        "username": "doaa",
+        "first_name": "doaa",
+        "last_name": "ahmed",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-08-03T15:05:13.717Z",
+        "email": "doaa@gmail.com",
+        "phone": "01092507202",
+        "address": "El minia",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$4yyl2F1CZICdRPREjRmlhT$fOOcD5DN8IR6G1/w8csiRk7eF6g8ADNyZYg1R5jG6UM=",
+        "last_login": "2026-08-04T12:24:42.760Z",
+        "is_superuser": false,
+        "username": "ahmedali1",
+        "first_name": "Ahmed",
+        "last_name": "Ali",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-08-04T12:23:35.269Z",
+        "email": "ahmedali1@gmail.com",
+        "phone": "01012345678",
+        "address": "15 Tahrir Street, Minya, Egypt",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$EwWlfGE8k8dHj9vqejsJ5q$rcZtxZnvV/jY6C6cq/39n1MVhpI1vYC+e69EwwNHiNo=",
+        "last_login": "2026-08-04T12:44:57.307Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-08-04T12:43:31.461Z",
+        "email": "admin123@gmail.com",
+        "phone": "",
+        "address": "",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$OBi6Kbt4MgRemt7L6ZGu3V$ME+mYly+oz1p0ZiyHQytYQPF/wIUlD1M1z7kVRunjNg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "testuser1",
+        "first_name": "Ahmed",
+        "last_name": "Ali",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-08-04T13:13:50.700Z",
+        "email": "testuser1@gmail.com",
+        "phone": "01012345678",
+        "address": "Cairo, Egypt",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.customuser",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$Xdin0Ua5fov6GUgr4CHZTh$RARdPJIFv4lo1Ogi/6kTpJy/39Pcjb3YoBmvwMB86BE=",
+        "last_login": "2026-08-04T13:55:52.935Z",
+        "is_superuser": false,
+        "username": "monaali1",
+        "first_name": "Mona",
+        "last_name": "Ali",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-08-04T13:55:21.743Z",
+        "email": "monaali1@gmail.com",
+        "phone": "01123456789",
+        "address": "Cairo Egypt",
+        "is_admin": false,
+        "is_librarian": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 1,
+    "fields": {
+        "title": "Clean Code",
+        "cover": "covers/clean_code.jfif",
+        "author": "Robert C. Martin",
+        "isbn": "9780132350884",
+        "category": "Technology",
+        "publish_year": 2008,
+        "available_copies": 1,
+        "total_copies": 5,
+        "description": "A handbook of agile software craftsmanship, focusing on best practices for writing clean, maintainable, and efficient code."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 2,
+    "fields": {
+        "title": "Introduction to Algorithms",
+        "cover": "covers/algo.jpg",
+        "author": "Thomas H. Cormen",
+        "isbn": "9780262033848",
+        "category": "Technology",
+        "publish_year": 2009,
+        "available_copies": 1,
+        "total_copies": 4,
+        "description": "A comprehensive guide to modern algorithms, covering basic data structures, graph algorithms, dynamic programming, and complexity theory"
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 3,
+    "fields": {
+        "title": "Design Patterns",
+        "cover": "covers/design.jpg",
+        "author": "Erich Gamma",
+        "isbn": "9780201633610",
+        "category": "Technology",
+        "publish_year": 1994,
+        "available_copies": 2,
+        "total_copies": 5,
+        "description": "Classic software engineering text that introduces 23 reusable object-oriented design patterns to solve common architectural problems."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 4,
+    "fields": {
+        "title": "The Pragmatic Programmer",
+        "cover": "covers/paragmatic.jpg",
+        "author": "Andrew Hunt",
+        "isbn": "9780135957059",
+        "category": "Technology",
+        "publish_year": 2019,
+        "available_copies": 3,
+        "total_copies": 5,
+        "description": "Practical insights and timeless tips for developers to build efficient, robust software and adapt to modern technology stack changes"
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 5,
+    "fields": {
+        "title": "Computer Networking",
+        "cover": "covers/Screenshot_2026-08-05_015304.png",
+        "author": "James Kurose",
+        "isbn": "9780133594140",
+        "category": "Technology",
+        "publish_year": 2020,
+        "available_copies": 3,
+        "total_copies": 4,
+        "description": "A top-down approach focusing on the Internet architecture, networking protocols, security fundamentals, and wireless networks."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 6,
+    "fields": {
+        "title": "Database System Concepts",
+        "cover": "covers/database.jpg",
+        "author": "Abraham Silberschatz",
+        "isbn": "9780073523323",
+        "category": "Technology",
+        "publish_year": 2019,
+        "available_copies": 2,
+        "total_copies": 5,
+        "description": "A fundamental textbook on database design, relational algebra, SQL optimization, transaction management, and storage engines."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 7,
+    "fields": {
+        "title": "Operating System Concepts",
+        "cover": "covers/operating_system.jpg",
+        "author": "Abraham Silberschatz",
+        "isbn": "9781119800361",
+        "category": "Technology",
+        "publish_year": 2018,
+        "available_copies": 3,
+        "total_copies": 4,
+        "description": "Core principles of modern operating systems, including process synchronization, memory management, file systems, and hardware control."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 8,
+    "fields": {
+        "title": "Artificial Intelligence",
+        "cover": "covers/artifitial.jpg",
+        "author": "Stuart Russell",
+        "isbn": "9780134610993",
+        "category": "Technology",
+        "publish_year": 2020,
+        "available_copies": 1,
+        "total_copies": 2,
+        "description": "A modern approach to artificial intelligence, exploring machine learning, search algorithms, neural networks, and decision theory."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 9,
+    "fields": {
+        "title": "Atomic Habits",
+        "cover": "covers/atomic.avif",
+        "author": "James Clear",
+        "isbn": "9780735211292",
+        "category": "Self-Help",
+        "publish_year": 2018,
+        "available_copies": 4,
+        "total_copies": 6,
+        "description": "An easy and proven practical guide to forming good habits, breaking bad ones, and mastering small behaviors that lead to remarkable results."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 10,
+    "fields": {
+        "title": "Deep Work",
+        "cover": "covers/deep_woek.jpg",
+        "author": "Cal Newport",
+        "isbn": "9781455586691",
+        "category": "Self-Help",
+        "publish_year": 2016,
+        "available_copies": 4,
+        "total_copies": 6,
+        "description": "Rules for focused success in a distracted world, offering strategies to cultivate extreme focus and increase professional output."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 11,
+    "fields": {
+        "title": "The Psychology of Money",
+        "cover": "covers/money.jpg",
+        "author": "Morgan Housel",
+        "isbn": "9780857197689",
+        "category": "Finance",
+        "publish_year": 2020,
+        "available_copies": 5,
+        "total_copies": 7,
+        "description": "Timeless lessons on wealth, greed, personal decision-making, and how human behavior drives financial success more than technical knowledge."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 12,
+    "fields": {
+        "title": "Thinking, Fast and Slow",
+        "cover": "covers/thinking.jpg",
+        "author": "Daniel Kahneman",
+        "isbn": "9780374533557",
+        "category": "Psychology",
+        "publish_year": 2011,
+        "available_copies": 3,
+        "total_copies": 6,
+        "description": "Explores the two systems that drive the way we thinkóSystem 1 (fast, emotional) and System 2 (slow, logical)óand how they shape choices."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 13,
+    "fields": {
+        "title": "1984",
+        "cover": "covers/1984.jpg",
+        "author": "George Orwell",
+        "isbn": "9780451524935",
+        "category": "Fiction",
+        "publish_year": 1949,
+        "available_copies": 2,
+        "total_copies": 3,
+        "description": "A famous dystopian novel exploring themes of totalitarian surveillance, government overreach, censorship, and individual freedom."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 14,
+    "fields": {
+        "title": "To Kill a Mockingbird",
+        "cover": "covers/to_kill.jpg",
+        "author": "Harper Lee",
+        "isbn": "9780060935467",
+        "category": "Fiction",
+        "publish_year": 1960,
+        "available_copies": 4,
+        "total_copies": 5,
+        "description": "A powerful classic novel set in the American South, addressing racial injustice, human empathy, and moral integrity through a young girl's eyes."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 15,
+    "fields": {
+        "title": "The Alchemist",
+        "cover": "covers/alchemist.jpg",
+        "author": "Paulo Coelho",
+        "isbn": "9780062315007",
+        "category": "Fiction",
+        "publish_year": 1988,
+        "available_copies": 4,
+        "total_copies": 6,
+        "description": "An inspiring story of a young shepherd journeying to fulfill his personal legend, emphasizing destiny, resilience, and inner wisdom."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 16,
+    "fields": {
+        "title": "Crime and Punishment",
+        "cover": "covers/crime.jpg",
+        "author": "Fyodor Dostoevsky",
+        "isbn": "9780486415871",
+        "category": "Classic",
+        "publish_year": 1966,
+        "available_copies": 2,
+        "total_copies": 5,
+        "description": "A psychological masterpiece analyzing moral dilemmas, guilt, redemption, and human suffering following a desperate crime."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 17,
+    "fields": {
+        "title": "The Great Gatsby",
+        "cover": "covers/the_great.jpg",
+        "author": "F. Scott Fitzgerald",
+        "isbn": "9780743273565",
+        "category": "Classic",
+        "publish_year": 1925,
+        "available_copies": 5,
+        "total_copies": 7,
+        "description": "A critique of the American Dream, set in the Roaring Twenties, depicting passion, obsession, wealth, and tragedy."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 18,
+    "fields": {
+        "title": "El Ayam",
+        "cover": "covers/€·«›_ﬂ «»_«·√Ì«„.jpg",
+        "author": "Taha Hussein",
+        "isbn": "9789770912345",
+        "category": "Autobiography",
+        "publish_year": 1929,
+        "available_copies": 3,
+        "total_copies": 6,
+        "description": "An autobiographical masterpiece by Taha Hussein, reflecting on his childhood, blindness, traditional education at Al-Azhar, and his journey toward intellectual enlightenment."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 19,
+    "fields": {
+        "title": "Murder on the Orient Express",
+        "cover": "covers/murder.jpg",
+        "author": "Agatha Christie",
+        "isbn": "9780062073501",
+        "category": "Mystery",
+        "publish_year": 1934,
+        "available_copies": 4,
+        "total_copies": 5,
+        "description": "A world-famous detective novel featuring Hercule Poirot, who must solve a mysterious murder aboard a snowbound luxury train filled with suspicious passengers."
+    }
+},
+{
+    "model": "catalog.book",
+    "pk": 20,
+    "fields": {
+        "title": "Python Basics",
+        "cover": "covers/python.webp",
+        "author": "David Amos",
+        "isbn": "9781234567890",
+        "category": "Programming",
+        "publish_year": 2012,
+        "available_copies": 3,
+        "total_copies": 5,
+        "description": "Introduction to Python programming for beginners."
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 1,
+    "fields": {
+        "user": 3,
+        "book": 1,
+        "borrow_date": "2026-08-03T21:08:20.551Z",
+        "return_date": null,
+        "is_returned": true
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "book": 2,
+        "borrow_date": "2026-08-03T21:08:51.422Z",
+        "return_date": null,
+        "is_returned": false
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "book": 3,
+        "borrow_date": "2026-08-03T21:09:01.518Z",
+        "return_date": null,
+        "is_returned": true
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 4,
+    "fields": {
+        "user": 3,
+        "book": 8,
+        "borrow_date": "2026-08-03T21:09:21.177Z",
+        "return_date": null,
+        "is_returned": true
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 5,
+    "fields": {
+        "user": 5,
+        "book": 20,
+        "borrow_date": "2026-08-04T12:53:28.995Z",
+        "return_date": null,
+        "is_returned": false
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 6,
+    "fields": {
+        "user": 3,
+        "book": 6,
+        "borrow_date": "2026-08-05T19:45:25.356Z",
+        "return_date": null,
+        "is_returned": true
+    }
+},
+{
+    "model": "loans.loan",
+    "pk": 7,
+    "fields": {
+        "user": 3,
+        "book": 1,
+        "borrow_date": "2026-08-05T21:23:18.269Z",
+        "return_date": null,
+        "is_returned": true
+    }
+}
+]
