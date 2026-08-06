@@ -16,23 +16,27 @@
 
             {% csrf_token %}
 
-            <label for="username">Username</label>
+            <div class="input-group mb-3">
+               <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+                {{ form.username }}
+            </div>
 
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                <i class="fas fa-lock"></i>
+               </span>
+               {{ form.password }}
+            </div>
 
-            <label for="password">Password</label>
-
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <button type="submit">
+            <button type="submit" class="btn btn-primary w-100">
                 Login
             </button>
-            
-            
 
         </form>
 
-        <div class="account-links">
+        <div class="account-links mt-3">
 
             Don't have an account?
 

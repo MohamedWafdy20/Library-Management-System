@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .forms import RegisterForm, EditProfileForm
+from .forms import RegisterForm, EditProfileForm,LoginForm
 from .models import CustomUser
 
 
@@ -55,16 +55,11 @@ def login_view(request):
 
     if request.method == "POST":
 
-        username = request.POST.get("username")
-        password = request.POST.get("password")
+        form = LoginForm(request, data=request.POST)
 
-        user = authenticate(
-            request,
-            username=username,
-            password=password
-        )
+        if form.is_valid():
 
-        if user is not None:
+            user = form.get_user()
 
             login(request, user)
 
@@ -74,15 +69,21 @@ def login_view(request):
             return redirect("book_list")
 
         else:
-
             messages.error(
                 request,
                 "Username or Password is incorrect."
             )
 
+    else:
+
+        form = LoginForm()
+
     return render(
         request,
-        "accounts/login.html"
+        "accounts/login.html",
+        {
+            "form": form
+        }
     )
 
 
@@ -150,26 +151,3 @@ def edit_profile(request):
     )
 
 
-# ==========================
-# Manage Users
-# ==========================
-
-@login_required
-def manage_users(request):
-
-    if not (
-        request.user.is_superuser
-        or request.user.is_admin
-    ):
-
-        return redirect("book_list")
-
-    users = CustomUser.objects.all()
-
-    return render(
-        request,
-        "accounts/manage_users.html",
-        {
-            "users": users
-        }
-    )

@@ -12,11 +12,7 @@ urlpatterns = [
     path("profile/", views.profile_view, name="profile"),
     path("edit-profile/", views.edit_profile, name="edit_profile"),
 
-    # Admin
-    path(
-        "manage-users/",
-        views.manage_users,
-        name="manage_users"
-    ),
+    
+   
 
 ]
